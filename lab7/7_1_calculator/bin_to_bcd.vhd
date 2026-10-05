@@ -1,13 +1,18 @@
 library ieee;
-use ieee.std_logic_1164.all;
+    use ieee.std_logic_1164.all;
 
 entity bin_to_bcd is
-    port (bin : in std_logic_vector(4 downto 0); bcd1 : out std_logic_vector(3 downto 0); bcd0 : out std_logic_vector(3 downto 0));
+    port (
+        bin  : in    std_logic_vector(4 downto 0);
+        bcd1 : out   std_logic_vector(3 downto 0);
+        bcd0 : out   std_logic_vector(3 downto 0)
+    );
 end entity;
 
 architecture Dataflow of bin_to_bcd is
 
 begin
+
     with bin select bcd1 <=
         "0000" when "00000" | "00001" | "00010" | "00011" | "00100" | "00101" | "00110" | "00111" | "01000" | "01001",
         "0001" when "01010" | "01011" | "01100" | "01101" | "01110" | "01111" | "10000" | "10001" | "10010" | "10011",
@@ -26,4 +31,5 @@ begin
         "1000" when "01000" | "10010" | "11100",
         "1001" when "01001" | "10011" | "11101",
         "0000" when others;
+
 end architecture;
