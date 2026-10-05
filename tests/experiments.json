@@ -1,0 +1,267 @@
+[
+  {
+    "name": "lab3_scalar",
+    "sources": [
+      "lab3/3_2_scalar/switch_to_led.vhd"
+    ],
+    "tops": [
+      "switch_to_led"
+    ],
+    "benches": [
+      "tb_switch_scalar"
+    ]
+  },
+  {
+    "name": "lab3_vector",
+    "sources": [
+      "lab3/3_2_vector/switch_to_led.vhd"
+    ],
+    "tops": [
+      "switch_to_led"
+    ],
+    "benches": [
+      "tb_switch_vector"
+    ]
+  },
+  {
+    "name": "lab3_mux",
+    "sources": [
+      "lab3/3_3_mux/mux_2to1_gate.vhd",
+      "lab3/3_3_mux/mux_2to1.vhd",
+      "lab3/3_3_mux/mux_2to1_4bit.vhd"
+    ],
+    "tops": [
+      "mux_2to1_gate",
+      "mux_2to1",
+      "mux_2to1_4bit"
+    ],
+    "benches": [
+      "tb_mux"
+    ]
+  },
+  {
+    "name": "lab3_display",
+    "sources": [
+      "lab3/3_4_display/mux_7seg.vhd"
+    ],
+    "tops": [
+      "mux_7seg"
+    ],
+    "benches": [
+      "tb_mux_display"
+    ]
+  },
+  {
+    "name": "lab4_decoder",
+    "sources": [
+      "common/bcd_to_7seg.vhd"
+    ],
+    "tops": [
+      "bcd_to_7seg"
+    ],
+    "benches": [
+      "tb_decoder"
+    ]
+  },
+  {
+    "name": "lab4_binary_display",
+    "sources": [
+      "common/bcd_to_7seg.vhd",
+      "lab4/4_2_binary_display/bin_to_bcd.vhd",
+      "lab4/4_2_binary_display/bin_to_dual_7seg.vhd"
+    ],
+    "tops": [
+      "bin_to_bcd",
+      "bin_to_dual_7seg"
+    ],
+    "benches": [
+      "tb_binary_display"
+    ]
+  },
+  {
+    "name": "lab4_adder",
+    "sources": [
+      "common/bcd_to_7seg.vhd",
+      "common/full_adder.vhd",
+      "lab4/4_2_binary_display/bin_to_bcd.vhd",
+      "lab4/4_2_binary_display/bin_to_dual_7seg.vhd",
+      "lab4/4_3_adder/adder_4bit.vhd",
+      "lab4/4_3_adder/adder_display_top.vhd"
+    ],
+    "tops": [
+      "full_adder",
+      "adder_4bit",
+      "adder_display_top"
+    ],
+    "benches": [
+      "tb_adder"
+    ]
+  },
+  {
+    "name": "lab5_rs",
+    "sources": [
+      "lab5/5_1_latches/rs_latch.vhd",
+      "lab5/5_1_latches/rs_gated_latch.vhd"
+    ],
+    "tops": [
+      "rs_latch",
+      "rs_gated_latch"
+    ],
+    "benches": [
+      "tb_rs_latches"
+    ]
+  },
+  {
+    "name": "lab5_d",
+    "sources": [
+      "lab5/5_1_latches/rs_latch.vhd",
+      "lab5/5_2_flip_flops/d_gated_latch.vhd",
+      "lab5/5_2_flip_flops/d_flip_flop_ms.vhd",
+      "common/d_flip_flop.vhd"
+    ],
+    "tops": [
+      "d_gated_latch",
+      "d_flip_flop_ms",
+      "d_flip_flop"
+    ],
+    "benches": [
+      "tb_flip_flops"
+    ]
+  },
+  {
+    "name": "lab5_register",
+    "sources": [
+      "lab5/5_3_register/register_4bit.vhd"
+    ],
+    "tops": [
+      "register_4bit"
+    ],
+    "benches": [
+      "tb_register"
+    ]
+  },
+  {
+    "name": "lab6_counter",
+    "sources": [
+      "common/clock_divider.vhd",
+      "common/d_flip_flop.vhd",
+      "lab6/6_1_counter/ripple_counter_top.vhd",
+      "lab6/6_1_counter/counter_top.vhd"
+    ],
+    "tops": [
+      "clock_divider",
+      "ripple_counter_top",
+      "counter_top"
+    ],
+    "benches": [
+      "tb_counters"
+    ]
+  },
+  {
+    "name": "lab6_rtc",
+    "sources": [
+      "common/bcd_to_7seg.vhd",
+      "common/clock_divider.vhd",
+      "common/button_press.vhd",
+      "common/mod_counter.vhd",
+      "common/hours_counter.vhd",
+      "lab6/6_2_time/rtc_top.vhd",
+      "lab6/6_2_time/stopwatch_top.vhd"
+    ],
+    "tops": [
+      "mod_counter",
+      "hours_counter",
+      "rtc_top"
+    ],
+    "benches": [
+      "tb_time_counters",
+      "tb_rtc"
+    ]
+  },
+  {
+    "name": "lab6_stopwatch",
+    "sources": [
+      "common/bcd_to_7seg.vhd",
+      "common/clock_divider.vhd",
+      "common/button_press.vhd",
+      "common/mod_counter.vhd",
+      "common/hours_counter.vhd",
+      "lab6/6_2_time/rtc_top.vhd",
+      "lab6/6_2_time/stopwatch_top.vhd"
+    ],
+    "tops": [
+      "stopwatch_top"
+    ],
+    "benches": [
+      "tb_stopwatch"
+    ]
+  },
+  {
+    "name": "lab6_scrolling",
+    "sources": [
+      "common/clock_divider.vhd",
+      "lab6/6_3_scrolling/char_to_7seg.vhd",
+      "lab6/6_3_scrolling/message_rom.vhd",
+      "lab6/6_3_scrolling/scrolling_top.vhd"
+    ],
+    "tops": [
+      "char_to_7seg",
+      "message_rom",
+      "scrolling_top"
+    ],
+    "benches": [
+      "tb_scrolling"
+    ]
+  },
+  {
+    "name": "lab7_calculator",
+    "sources": [
+      "common/bcd_to_7seg.vhd",
+      "common/full_adder.vhd",
+      "common/adder_n.vhd",
+      "common/button_press.vhd",
+      "lab7/7_1_calculator/bin_to_bcd.vhd",
+      "lab7/7_1_calculator/calculator_top.vhd"
+    ],
+    "tops": [
+      "bin_to_bcd",
+      "calculator_top"
+    ],
+    "benches": [
+      "tb_calculator"
+    ]
+  },
+  {
+    "name": "lab7_accumulator",
+    "sources": [
+      "common/bcd_to_7seg.vhd",
+      "common/button_press.vhd",
+      "lab7/7_2_accumulator/bin_to_bcd.vhd",
+      "lab7/7_2_accumulator/accumulator_top.vhd"
+    ],
+    "tops": [
+      "bin_to_bcd",
+      "accumulator_top"
+    ],
+    "benches": [
+      "tb_accumulator"
+    ]
+  },
+  {
+    "name": "lab8_multiplier",
+    "sources": [
+      "common/bcd_to_7seg.vhd",
+      "common/button_press.vhd",
+      "lab7/7_2_accumulator/bin_to_bcd.vhd",
+      "lab8/8_1_multiplier/multiplier_fsm.vhd",
+      "lab8/8_1_multiplier/multiplier_top.vhd"
+    ],
+    "tops": [
+      "multiplier_fsm",
+      "multiplier_top"
+    ],
+    "benches": [
+      "tb_multiplier"
+    ]
+  }
+]
